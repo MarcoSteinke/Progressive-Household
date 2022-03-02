@@ -21,11 +21,11 @@ public class ReceiptMapperTest {
         // act
         ReceiptDTO receiptDTO = ReceiptMapper.receiptToReceiptDto(receipt);
 
-        assertThat(receiptDTO.id().equals(receipt.getId().valueOf()));
-        assertThat(receiptDTO.title().equals(receipt.getTitle().valueOf()));
-        assertThat(receiptDTO.amount().equals(receipt.getAmount().valueOf()));
-        assertThat(receiptDTO.localDate().equals(receipt.getLocalDate()));
-        assertThat(receiptDTO.filePath().equals(receipt.getUploadedImage().valueOf()));
+        assertThat(receiptDTO.getId().equals(receipt.getId().valueOf()));
+        assertThat(receiptDTO.getTitle().equals(receipt.getTitle().valueOf()));
+        assertThat(receiptDTO.getAmount().equals(receipt.getAmount().valueOf()));
+        assertThat(receiptDTO.getLocalDate().equals(receipt.getLocalDate()));
+        assertThat(receiptDTO.getFilePath().equals(receipt.getUploadedImage().valueOf()));
     }
 
     @Test
@@ -38,11 +38,11 @@ public class ReceiptMapperTest {
         Receipt receipt = ReceiptMapper.receiptDtoToReceipt(receiptDTO);
 
         // assert
-        assertThat(receiptDTO.id().equals(receipt.getId().valueOf()));
-        assertThat(receiptDTO.title().equals(receipt.getTitle().valueOf()));
-        assertThat(receiptDTO.amount().equals(receipt.getAmount().valueOf()));
-        assertThat(receiptDTO.localDate().equals(receipt.getLocalDate()));
-        assertThat(receiptDTO.filePath().equals(receipt.getUploadedImage().valueOf()));
+        assertThat(receiptDTO.getId().equals(receipt.getId().valueOf()));
+        assertThat(receiptDTO.getTitle().equals(receipt.getTitle().valueOf()));
+        assertThat(receiptDTO.getAmount().equals(receipt.getAmount().valueOf()));
+        assertThat(receiptDTO.getLocalDate().equals(receipt.getLocalDate()));
+        assertThat(receiptDTO.getFilePath().equals(receipt.getUploadedImage().valueOf()));
     }
 
 

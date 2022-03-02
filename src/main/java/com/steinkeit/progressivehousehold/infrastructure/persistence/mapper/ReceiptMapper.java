@@ -19,11 +19,11 @@ public class ReceiptMapper {
 
     public static Receipt receiptDtoToReceipt(ReceiptDTO receiptDTO) {
         return ReceiptFactory.create(
-                receiptDTO.id(),
-                receiptDTO.title(),
-                receiptDTO.amount(),
-                receiptDTO.localDate(),
-                receiptDTO.filePath()
+                receiptDTO.getId(),
+                receiptDTO.getTitle(),
+                receiptDTO.getAmount(),
+                receiptDTO.getLocalDate(),
+                receiptDTO.getFilePath()
         );
     }
 }
