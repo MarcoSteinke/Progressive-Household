@@ -1,16 +1,22 @@
 package com.steinkeit.progressivehousehold.infrastructure.persistence.dto;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.LocalDate;
 
+@Table("receipt_dto")
 public class ReceiptDTO {
 
-    private Long id;
-    private String title;
-    private Double amount;
-    private LocalDate localDate;
-    private String filePath;
+    @Id
+    private final Long id;
+    private final String title;
+    private final Double amount;
+    @Column("local_date")
+    private final LocalDate localDate;
+    @Column("file_path")
+    private final String filePath;
 
     public ReceiptDTO(Long id, String title, Double amount, LocalDate localDate, String filePath) {
         this.id = id;
