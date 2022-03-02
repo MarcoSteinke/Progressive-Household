@@ -2,13 +2,13 @@ package com.steinkeit.progressivehousehold.domain.model.finance;
 
 final class Amount {
 
-    private final Float amount;
+    private final Double amount;
 
-    Amount(Float amount) {
+    Amount(Double amount) {
         this.amount = amount;
     }
 
-    public Float getAmount() {
+    public Double getAmount() {
         return amount;
     }
 }
