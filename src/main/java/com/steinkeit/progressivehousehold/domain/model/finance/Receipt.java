@@ -10,7 +10,7 @@ public final class Receipt {
     private final LocalDate localDate;
     private final UploadedImage uploadedImage;
 
-    public Receipt(ReceiptId id, Title title, Amount amount, LocalDate localDate, UploadedImage uploadedImage) {
+    Receipt(ReceiptId id, Title title, Amount amount, LocalDate localDate, UploadedImage uploadedImage) {
         this.id = id;
         this.title = title;
         this.amount = amount;
@@ -20,6 +20,10 @@ public final class Receipt {
 
     public Title getTitle() {
         return title;
+    }
+
+    public Boolean hasImage() {
+        return this.uploadedImage != null;
     }
 
     public Amount getAmount() {
