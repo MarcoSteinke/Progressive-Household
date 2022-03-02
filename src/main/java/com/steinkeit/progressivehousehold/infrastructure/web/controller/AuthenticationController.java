@@ -8,7 +8,7 @@ import org.springframework.web.context.annotation.SessionScope;
 
 @Controller
 @SessionScope
-public class RegistrationController {
+public class AuthenticationController {
 
     @GetMapping("/")
     @ResponseBody
