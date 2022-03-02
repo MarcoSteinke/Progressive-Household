@@ -13,11 +13,12 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 @Controller
-@RequestMapping(value = "/finance", method = {RequestMethod.GET, RequestMethod.POST})
+@RequestMapping(value = "/finance/")
 public class FinanceController {
 
     private final FinanceService financeService;
 
+    @Autowired
     public FinanceController(FinanceService financeService) {
         this.financeService = financeService;
     }

@@ -6,6 +6,8 @@ import com.steinkeit.progressivehousehold.domain.repositoryabstraction.IReceiptR
 import com.steinkeit.progressivehousehold.infrastructure.persistence.dto.ReceiptDTO;
 import com.steinkeit.progressivehousehold.infrastructure.persistence.mapper.ReceiptMapper;
 import com.steinkeit.progressivehousehold.infrastructure.persistence.repository.ReceiptRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -15,7 +17,7 @@ public class ReceiptRepositoryImpl implements IReceiptRepository {
 
     private final ReceiptRepository receiptRepository;
 
-    public ReceiptRepositoryImpl(ReceiptRepository receiptRepository) {
+    public ReceiptRepositoryImpl(@Lazy ReceiptRepository receiptRepository) {
         this.receiptRepository = receiptRepository;
     }
 
