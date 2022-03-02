@@ -11,8 +11,7 @@ import org.springframework.web.context.annotation.SessionScope;
 public class AuthenticationController {
 
     @GetMapping("/")
-    @ResponseBody
     public String index(Authentication authentication) {
-        return String.format("<h1>Hello %s!</h1>", authentication.getName());
+        return "index";
     }
 }
