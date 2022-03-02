@@ -2,15 +2,15 @@ package com.steinkeit.progressivehousehold.domain.service;
 
 import com.steinkeit.progressivehousehold.domain.model.finance.Receipt;
 import com.steinkeit.progressivehousehold.domain.model.finance.ReceiptId;
-import com.steinkeit.progressivehousehold.infrastructure.persistence.implementation.ReceiptRepositoryImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.steinkeit.progressivehousehold.domain.repositoryabstraction.IReceiptRepository;
 import org.springframework.stereotype.Service;
+
 @Service
 public class FinanceService {
 
-    private final ReceiptRepositoryImpl receiptRepository;
+    private final IReceiptRepository receiptRepository;
 
-    public FinanceService(ReceiptRepositoryImpl receiptRepository) {
+    public FinanceService(IReceiptRepository receiptRepository) {
         this.receiptRepository = receiptRepository;
     }
 
